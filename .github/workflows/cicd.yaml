@@ -6,6 +6,7 @@ on:
   pull_request:
     branches: [ "main" ]
 
+##giving permission to github actions to read the content of repo
 permissions:
   contents: read
 
@@ -15,7 +16,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest] 
+        os: [ubuntu-latest, windows-latest]    ##our project should be compatiable with ubuntu and windws
         python-version: ["3.8"]
 
     steps:
